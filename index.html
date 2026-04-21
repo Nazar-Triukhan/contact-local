@@ -1,14 +1,21 @@
-<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Document</title><body>
+<!DOCTYPE html><html lang=en><meta charset=UTF-8><meta name=viewport content="width=device-width, initial-scale=1.0"><title>Document</title><link rel=stylesheet href=/todolist-parsel/contact-local.8354638c.css><body>
     <h2>Додати контакт</h2>
 
-<input id=firstName placeholder="Ім'я"><br><br>
-<input id=lastName placeholder=Прізвище><br><br>
-<input id=phone placeholder=Телефон><br><br>
-<input type=email id=email placeholder=Email><br><br>
+<input id=firstName placeholder="Ім'я" required minlength=2><br><br>
 
-<button onclick=addContact()>Додати</button>
+<input id=lastName placeholder=Прізвище required minlength=2><br><br>
+
+<input id=phone placeholder=Телефон required pattern=^\+?[0-9]{10,15}$ title="Введіть номер телефону (10-15 цифр, можна з +)"><br><br>
+
+<input type=email id=email placeholder=Email required><br><br>
+
+<button id=buttonAdd>Додати</button>
 
 <h2>Список контактів</h2>
-<ul id=contactList></ul>
+<ul id=contactList>
 
+</ul>
+
+
+<script type=module src=/todolist-parsel/contact-local.f9dfd547.js></script>
 
