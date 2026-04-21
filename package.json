@@ -5,7 +5,7 @@
   "browserslist": "> 0.5%, last 2 versions, not dead",
   "scripts": {
     "dev": "npx parcel src/index.html",
-    "build": "parcel build src/index.html --public-url /todolist-parsel/",
+    "build": "parcel build src/index.html --public-url /contact-local/",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist"
   },
@@ -19,7 +19,7 @@
   "bugs": {
     "url": "https://github.com/Nazar-Triukhan/contact-local/issues"
   },
-  "homepage": "https://github.com/Nazar-Triukhan/contact-local#readme",
+  "homepage": "https://Nazar-Triukhan.github.io/contact-local/",
   "devDependencies": {
     "parcel": "^2.16.4"
   },

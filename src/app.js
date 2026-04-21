@@ -5,6 +5,8 @@ const emailInput = document.getElementById("email");
 const listRef = document.getElementById("contactList");
 const addButton = document.getElementById("buttonAdd");
 
+
+
 const contacts = JSON.parse(localStorage.getItem("contacts")) || [];
 
 render();
@@ -22,6 +24,12 @@ addButton.addEventListener("click", () => {
 
     localStorage.setItem("contacts", JSON.stringify(contacts));
 
+    // Очистка полів
+    firstNameInput.value = "";
+    lastNameInput.value = "";
+    phoneInput.value = "";
+    emailInput.value = "";
+
     render();
 });
 
@@ -34,11 +42,13 @@ function render() {
 
 function createItem(obj, i) {
     const item = `
-    <li class="item" data-index="${i}">
-      <p>${obj.firstName} ${obj.lastName}</p>
-      <a href="tel:${obj.phone}">${obj.phone}</a><br>
-      <a href="mailto:${obj.email}">${obj.email}</a>
-      <button class="btn">x</button>
+    <li class="item" data-id="${i}">
+      <div>
+        <p>${obj.firstName} ${obj.lastName}</p>
+        <a href="tel:${obj.phone}">${obj.phone}</a><br>
+        <a href="mailto:${obj.email}">${obj.email}</a>
+      </div>
+      <button class="btn">×</button>
     </li>`;
 
     listRef.innerHTML += item;
@@ -50,7 +60,7 @@ listRef.addEventListener("click", (e) => {
     if (e.target.classList.contains("btn")) {
 
         const li = e.target.closest(".item");
-        const index = Number(li.dataset.index);
+        const index = Number(li.dataset.id);
 
         contacts.splice(index, 1);
 
