@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./ style.css">
+</head>
+<body>
+    <h2>Додати контакт</h2>
+
+<input 
+  type="text" 
+  id="firstName" 
+  placeholder="Ім'я" 
+  required 
+  minlength="2"
+><br><br>
+
+<input 
+  type="text" 
+  id="lastName" 
+  placeholder="Прізвище" 
+  required 
+  minlength="2"
+><br><br>
+
+<input 
+  type="text" 
+  id="phone" 
+  placeholder="Телефон" 
+  required 
+  pattern="^\+?[0-9]{10,15}$"
+  title="Введіть номер телефону (10-15 цифр, можна з +)"
+><br><br>
+
+<input 
+  type="email" 
+  id="email" 
+  placeholder="Email" 
+  required
+><br><br>
+
+<button id="buttonAdd">Додати</button>
+
+<h2>Список контактів</h2>
+<ul id="contactList">
+
+</ul>
+
+
+<script type="module" src="./app.js"></script>
+</body>
+</html>
