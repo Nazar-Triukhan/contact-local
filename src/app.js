@@ -24,12 +24,6 @@ addButton.addEventListener("click", () => {
 
     localStorage.setItem("contacts", JSON.stringify(contacts));
 
-    // Очистка полів
-    firstNameInput.value = "";
-    lastNameInput.value = "";
-    phoneInput.value = "";
-    emailInput.value = "";
-
     render();
 });
 
